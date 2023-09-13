@@ -14,38 +14,34 @@
 
 
 
-function task() {
+function fizzbuzz() {
     for (let i = 1; i <= 500; i++) {
-      if(i % 11 === 0){
-        console.log('Bizz')
+      let output = ''
+
+      if (i % 3 === 0) {
+        output += 'Fizz'
       }
-      else if ( i % 9 === 0){
-        console.log('Fuzz')
+
+      if (i % 5 === 0) {
+        output +='Buzz'
       }
-      else if(i % 7 === 0 && i % 5 === 0 && i % 3 === 0){
-        console.log('FizzBuzzBiff')
+
+      if (i % 7 === 0) {
+        output +='Biff'
       }
-      else if (i % 7 === 0 && i % 5 === 0) {
-        console.log('BuzzBiff')
+
+      if (i % 9 === 0) {
+        output +='Fuzz'
       }
-      else if (i % 7 === 0 && i % 3 === 0) {
-        console.log('FizzBiff')
+
+      if (i % 11 === 0) {
+        output +='Bizz'
       }
-      else if (i % 7 === 0) {
-        console.log('Biff')
+
+      if (!output) {
+        output = i
       }
-      else if (i % 3 === 0 && i % 5 == 0){
-        console.log('FizzBuzz')
-      }
-      else if (i % 3 === 0){
-        console.log('Fizz')
-      }
-      else if (i % 5 === 0){
-        console.log('Buzz')
-      }
-      else {
-        console.log(i)
-      }
-    } 
+      console.log (output)
+    }
   }
-  task()
+  fizzbuzz()
